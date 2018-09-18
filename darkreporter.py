@@ -7,10 +7,16 @@ with open('nessus.csv') as csvfile:
 		PluginRow = row['Plugin']
 		AllData.append(PluginRow)
 #print(len(AllData))
-print(AllData[0])
-#AllData.sort()
-#for x in AllData:
-#  print(x)
+#print(AllData[0])
+print(AllData)
+AllData.sort()
+print(AllData)
+RemovingDublicates = list(set(AllData))
+RemovingDublicates.sort()
+print(RemovingDublicates)
+                #PluginRow = row['Plugin']
+                #AllData.append(PluginRow)
+	#print(x)
 		#print('Plugin ---> ', row['Plugin'])
 		#print('Plugin Name ---> ', row['Plugin Name'])
 		#print('Family ---> ', row['Family'])
