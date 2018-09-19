@@ -9,4 +9,4 @@ with open('nessus.csv') as csvfile:
 	reader = csv.DictReader(csvfile)
 	for row in reader:
 		if number == row['Plugin']:
-			print(row)
+			print(row['IP Address'],'\n\n\n')
