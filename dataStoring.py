@@ -1,22 +1,26 @@
+	import json
 import mysql.connector as mysql
 
-class DarkStoringData:
-	def dark_db_config(self, DB_USERNAME, DB_PASSWORD, DB_HOST_OR_IP, DB_NAME):
+class StoringData:
+	def db_config(self, DB_USERNAME, DB_PASSWORD, DB_HOST_OR_IP, DB_NAME):
 		configuration = {
-				'darkdbusername': DB_USERNAME,
-				'darkdbpassword': DB_PASSWORD,
-				'darkdbhostname': DB_HOST_OR_IP,
-				'darkdbname': DB_NAME
+				"user": DB_USERNAME,
+				"password": DB_PASSWORD,
+				"host": DB_HOST_OR_IP,
+				"database": DB_NAME
 		}
 		return configuration
 
-	def dark_db_connector(self, CONFIGURATION_INFO):
-		initConnection = mysql.connect(CONFIGURATION_INFO)
-		cursor = initConnection.cursor()
+	def db_connector(self, CONFIGURATION_INFO):
+		initalConnection = mysql.connect(**CONFIGURATION_INFO)
+		cursor = initalConnection.cursor()
+		
 
-dsd = DarkStoringData()
-config = dsd.dark_db_config('root','toor','localhost','darkcoders')
-print(config)
+dsd = StoringData()
+config = dsd.db_config('user','password','localhost','mysql')
+connect = dsd.db_connector(config)
+#connect = dsd.dark_db_connector(config)
+#print(connect)
 #connect = dsd.dark_db_connector(**config)
 #db_name = 'YOUR_DB_NAME'
 #try:
