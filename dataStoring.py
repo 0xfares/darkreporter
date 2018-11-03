@@ -1,4 +1,4 @@
-	import json
+
 import mysql.connector as mysql
 
 class StoringData:

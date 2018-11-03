@@ -180,7 +180,7 @@ with open('nessus.csv') as csvfile:
 			RemovingDuplicatesFromVulnerablityPublicationDate.sort()
 			RemovingDuplicatesFromExploitEase.sort()
 			
-	AllData.append({'Plugin Name':RemovingDuplicatesFromPluginName,'Family':RemovingDuplicatesFromFamily,'Severity':RemovingDuplicatesFromSeverity,'IP Address':RemovingDuplicatesFromIPAddress,'Protocol':RemovingDuplicatesFromProtocol,'Port':RemovingDuplicatesFromPort,'Exploitable':RemovingDuplicatesFromExploitable,'Repository':RemovingDuplicatesFromRepository,'MACAddress':RemovingDuplicatesFromMACAddress,'DNSName':RemovingDuplicatesFromDNSName,'NetBIOSName':RemovingDuplicatesFromNetBIOSName,'PluginText':RemovingDuplicatesFromPluginText,'FirstDiscovered':RemovingDuplicatesFromFirstDiscovered,'LastObserved':RemovingDuplicatesFromLastObserved,'ExploitFrameworks':RemovingDuplicatesFromExploitFrameworks,'Synopsis':RemovingDuplicatesFromSynopsis,'Description':RemovingDuplicatesFromDescription,'Solution':RemovingDuplicatesFromSolution,'SeeAlso':RemovingDuplicatesFromSeeAlso,'CVE':RemovingDuplicatesFromCVE,'VulnerabilityPublicationDate':RemovingDuplicatesFromVulnerablityPublicationDate,'ExploitEase':RemovingDuplicatesFromExploitEase})
+	AllData.append({'IP Address':RemovingDublicatesFromIPAddress})
 print(AllData)
 #RemovingDublicates = list(set(AllData))
 #RemovingDublicates.sort()
