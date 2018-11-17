@@ -1,0 +1,10 @@
+export PS1="\e[1;97;41m$(git config --global user.name)\e[0m:\e[1;42;97m${PWD##*/}\e[0m\e[5;44;97m$(__git_ps1 "(%s)")\e[0m>>> "
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
